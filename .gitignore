@@ -1,0 +1,54 @@
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Model checkpoints
+checkpoints/
+
+# Scraped web assets (downloaded JS/CSS/images)
+source/*_files/
+
+# Request/connection logs
+data/fetch/request_logs*
+data/fetch/*.log
+
+# Generated upcoming/today race data
+data/upcoming/
+data/today/
+
+# Backup files
+*.bak*
+
+# Scraped HTML pages, HAR archives, and cache files in source/
+source/*.har
+source/https-*
+source/*netkeiba*
+source/ *
+
+# Source delivery directories
+files*//source
+
+# ── Data files: exclude by default, keep only registry/index ───────────────
+# .gitignore doesn't affect already-tracked files (they stay tracked).
+# For those, use `git update-index --assume-unchanged` to silence noise.
+data/**
+!data/predictions/model_registry.json
+!data/.gitkeep
+
+# Multi-worker transient lock files (per docs/COLLAB_RULES.md)
+.claims/
+
+# Device-local state (never commit) — guardrail per training-goals brief
+.last_weekly_fetch
+.refetch_queue.json
+data/.db_refresh_log.jsonl
+
+# Azure archive migration logs (local ops artifacts)
+logs/azure_migrate_*.log
+data/foursquare/
+data/hgtan/
+data/fetch/*.bak
